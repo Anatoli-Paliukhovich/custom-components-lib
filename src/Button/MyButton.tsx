@@ -8,9 +8,9 @@ export interface MyButtonProps {
 }
 
 const MyButton: FC<MyButtonProps> = ({ children, color, big, ...props }) => {
-  const rootClasses = [styles.myButton]; // Используем styles.myButton вместо строки
+  const rootClasses = [styles.myButton];
   if (big) {
-    rootClasses.push(styles.bigBtn); // Используем styles.bigBtn вместо строки
+    rootClasses.push(styles.bigBtn);
   }
 
   return (

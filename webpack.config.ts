@@ -46,10 +46,7 @@ export default (env: EnvVariable) => {
               },
             },
           ],
-          exclude: [
-            /node_modules/,
-            path.resolve(__dirname, 'webpack.config.ts'),
-          ],
+          exclude: [/node_modules/],
         },
       ],
     },

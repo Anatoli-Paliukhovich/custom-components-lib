@@ -6,8 +6,7 @@ export interface MyButtonProps {
   big?: boolean;
   children: ReactNode;
 }
-let x = 1;
-console.log('sdsdsd');
+
 const MyButton: FC<MyButtonProps> = ({ children, color, big, ...props }) => {
   const rootClasses = [styles.myButton]; // Используем styles.myButton вместо строки
   if (big) {

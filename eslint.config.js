@@ -24,7 +24,7 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ['dist', 'node_modules', 'coverage', 'eslint.config.js'],
+    ignores: ['dist', 'node_modules', 'eslint.config.js'],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
@@ -61,7 +61,6 @@ export default tseslint.config(
       'react/self-closing-comp': ['error', { component: true, html: true }],
       'max-lines': ['warn', { max: 124 }],
       'max-params': ['error', 3],
-      'no-console': 'error',
     },
   }
 );

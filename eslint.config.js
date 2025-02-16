@@ -19,7 +19,7 @@ export default tseslint.config(
     },
     settings: {
       react: {
-        version: '19.0.0', // Укажите вашу версию React здесь
+        version: '19.0.0',
       },
     },
   },
@@ -61,7 +61,6 @@ export default tseslint.config(
       'react/self-closing-comp': ['error', { component: true, html: true }],
       'max-lines': ['warn', { max: 124 }],
       'max-params': ['error', 3],
-      'linebreak-style': ['error', 'unix'],
     },
   }
 );

@@ -70,7 +70,7 @@
     "dist"
   ],
   "lint-staged": {
-    "*.{ts,tsx,js}": "eslint . --max-warnings 0 --no-warn-ignored",
+    "*.{ts,tsx,js}": "eslint . --max-warnings 0 --no-warn-ignored --fix",
     "*.{js,html,css,scss,ts,tsx}": "prettier --write"
   }
 }

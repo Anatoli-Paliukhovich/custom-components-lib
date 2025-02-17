@@ -1,33 +1,58 @@
 import type { Meta, StoryObj } from '@storybook/react';
-// import { fn } from '@storybook/test';
 import MyButton from '../Button/MyButton';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta = {
+const meta: Meta<typeof MyButton> = {
   title: 'Example/MyButton',
   component: MyButton,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  argTypes: {},
-  args: {},
-} satisfies Meta<typeof MyButton>;
+  argTypes: {
+    variant: {
+      control: {
+        type: 'select',
+        options: ['text', 'contained', 'outlined'],
+      },
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['small', 'medium', 'large'],
+      },
+    },
+  },
+};
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
+export const ContainedButton: Story = {
   args: {
-    color: 'red',
-    children: 'Какой то текст',
+    color: 'rgb(255, 255, 255)',
+    children: 'Click',
+    variant: 'contained',
+    size: 'medium',
+    disabled: false,
   },
 };
 
-export const Secondary: Story = {
+export const OutlinedButton: Story = {
   args: {
-    color: 'orange',
-    children: 'Какой то текст',
+    color: 'rgb(25, 118, 210)',
+    children: 'Click',
+    variant: 'outlined',
+    size: 'small',
+    disabled: false,
+  },
+};
+
+export const TextButton: Story = {
+  args: {
+    color: 'rgb(25, 118, 210)',
+    children: 'Click',
+    variant: 'text',
+    size: 'large',
+    disabled: false,
   },
 };

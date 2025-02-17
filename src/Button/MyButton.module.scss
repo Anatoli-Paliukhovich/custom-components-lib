@@ -1,11 +1,88 @@
-.my-button {
-  padding: 10px 5px;
-  color: black;
-  border: 1px solid black;
-  background: transparent;
-}
+@use '../common.module.scss' as *;
+.myButton {
+  border: none;
+  border-radius: toRem(4);
+  padding: toRem(10) toRem(16);
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.1s;
+  font-weight: 500;
+  &.contained {
+    background-color: $background-main;
+    color: $title_color;
+    box-shadow:
+      toRem(0) toRem(3) toRem(1) toRem(-2) $btn-box-shadow1,
+      toRem(0) toRem(2) toRem(2) toRem(0) $btn-box-shadow2,
+      toRem(0) toRem(1) toRem(5) toRem(0) $btn-box-shadow3;
 
-.big-btn {
-  font-size: 30px;
-  padding: 20px;
+    &:hover {
+      background-color: $background-main-hover;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+
+    &.disabled {
+      background-color: $background-main-disabled;
+      cursor: not-allowed;
+      color: $title_color_disabled;
+      transform: scale(1);
+    }
+  }
+
+  &.outlined {
+    border: toRem(1) solid $outlined-border;
+    background-color: transparent;
+    color: $outlined-color;
+
+    &:hover {
+      background-color: $outlined-hover;
+    }
+
+    &:active {
+      transform: scale(0.95);
+      background-color: $btn-active-color;
+    }
+
+    &.disabled {
+      border-color: $outlined-border-disabled;
+      color: $title_color_disabled;
+      cursor: not-allowed;
+      transform: scale(1);
+    }
+  }
+
+  &.text {
+    background-color: transparent;
+    color: $text-color;
+
+    &:hover {
+      background-color: $outlined-hover;
+    }
+
+    &:active {
+      transform: scale(0.95);
+      background-color: $btn-active-color;
+    }
+
+    &.disabled {
+      color: $outlined-color-disabled;
+      cursor: not-allowed;
+      transform: scale(1);
+    }
+  }
+
+  &.small {
+    font-size: toRem(12);
+  }
+
+  &.medium {
+    font-size: toRem(16);
+  }
+
+  &.large {
+    font-size: toRem(20);
+  }
 }

@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+$background-main: rgb(25, 118, 210);
+$title_color: rgb(255, 255, 255);
+$background-main-hover: rgb(24, 110, 196);
+$background-main-disabled: rgba(0, 0, 0, 0.12);
+$title_color_disabled: rgba(0, 0, 0, 0.38);
+$outlined-border: rgba(25, 118, 210, 0.5);
+$outlined-color: rgb(25, 118, 210);
+$outlined-hover: rgba(63, 81, 181, 0.1);
+$outlined-border-disabled: rgb(176, 190, 197);
+$outlined-color-disabled: rgba(0, 0, 0, 0.38);
+$btn-box-shadow1: rgba(0, 0, 0, 0.2);
+$btn-box-shadow2: rgba(0, 0, 0, 0.14);
+$btn-box-shadow3: rgba(0, 0, 0, 0.12);
+$btn-active-color: rgba(63, 81, 181, 0.2);
+$text-color: rgb(25, 118, 210);
+
+/* ToRem */
+@function toRem($px, $current: 16) {
+  $result: math.div($px, $current) + rem;
+  @return $result;
+}

@@ -9,7 +9,7 @@ type EnvVariable = {
 
 export default (env: EnvVariable) => {
   const config: webpack.Configuration = {
-    mode: env.mode ?? 'development',
+    mode: env.mode ?? 'production',
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
       path: path.resolve(__dirname, 'dist'),

@@ -9,7 +9,7 @@
     transform 0.1s;
   font-weight: 500;
   &.contained {
-    background-color: $background-main;
+    background-color: $color-main;
     color: $title_color;
     box-shadow:
       toRem(0) toRem(3) toRem(1) toRem(-2) $btn-box-shadow1,
@@ -17,7 +17,7 @@
       toRem(0) toRem(1) toRem(5) toRem(0) $btn-box-shadow3;
 
     &:hover {
-      background-color: $background-main-hover;
+      background-color: $color-main-dark;
     }
 
     &:active {
@@ -47,7 +47,7 @@
     }
 
     &.disabled {
-      border-color: $outlined-border-disabled;
+      border-color: $main-grey;
       color: $title_color_disabled;
       cursor: not-allowed;
       transform: scale(1);

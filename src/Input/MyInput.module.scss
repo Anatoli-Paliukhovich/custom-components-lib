@@ -1,0 +1,139 @@
+@use '../common.module.scss' as *;
+
+.myInput {
+  position: relative;
+  font-size: toRem(18);
+  color: $main-grey;
+
+  &.outlined {
+    .input {
+      border: toRem(1) solid $main-grey;
+      border-radius: toRem(4);
+      padding: toRem(15) toRem(8);
+      transition: border-color 0.2s;
+      outline: none;
+
+      &:focus {
+        border: toRem(1.5) solid $color-main;
+      }
+
+      &.error {
+        border: toRem(1) solid $error-color;
+        &:focus {
+          border: toRem(1.5) solid $error-color;
+        }
+      }
+    }
+
+    .label {
+      position: absolute;
+      top: 50%;
+      left: toRem(8);
+      transform: translateY(-50%);
+      transition: 0.2s;
+      pointer-events: none;
+
+      &.error {
+        color: $error-color;
+      }
+    }
+
+    .active {
+      top: 0;
+      left: toRem(8);
+      background-color: white;
+      font-size: toRem(14);
+      padding: toRem(0) toRem(5);
+      color: $color-main-dark;
+    }
+  }
+
+  &.standard {
+    .input {
+      border: none;
+      padding: toRem(10) toRem(3);
+      border-bottom: toRem(1) solid $main-grey;
+      outline: none;
+      width: 100%;
+
+      &:focus {
+        border-bottom: toRem(1.5) solid $color-main;
+      }
+
+      &.error {
+        border-bottom: toRem(1.5) solid $error-color;
+      }
+    }
+
+    .label {
+      position: absolute;
+      top: 50%;
+      left: toRem(8);
+      transform: translateY(-50%);
+      transition: 0.2s;
+      pointer-events: none;
+
+      &.error {
+        color: $error-color;
+      }
+    }
+
+    .active {
+      top: toRem(-8);
+      left: toRem(8);
+      font-size: toRem(14);
+      color: $color-main-dark;
+    }
+  }
+
+  &.filled {
+    background-color: $main-grey-light;
+    border-radius: toRem(4) toRem(4) 0 0;
+
+    .input {
+      border: none;
+      background-color: $main-grey-light;
+      border-radius: toRem(4) toRem(4) 0 0;
+      border-bottom: toRem(1.5) solid $main-grey;
+      outline: none;
+      width: 100%;
+      padding: toRem(25) toRem(3) toRem(6) toRem(3);
+
+      &:focus {
+        border-bottom: toRem(1.5) solid $color-main;
+      }
+
+      &.error {
+        border-bottom: toRem(1.5) solid $error-color;
+      }
+    }
+
+    .label {
+      position: absolute;
+      top: 50%;
+      left: toRem(8);
+      transform: translateY(-50%);
+      transition: 0.2s;
+      pointer-events: none;
+
+      &.error {
+        color: $error-color;
+      }
+    }
+
+    .active {
+      top: toRem(10);
+      left: toRem(8);
+      font-size: toRem(14);
+      color: $color-main-dark;
+    }
+  }
+
+  .helperText {
+    position: absolute;
+    bottom: toRem(-20);
+    left: toRem(5);
+    font-size: toRem(12);
+    color: $error-color;
+  }
+}

@@ -10,6 +10,7 @@ export interface MyButtonProps
   size?: Size;
   variant?: Variant;
   className?: string;
+  disabled: boolean;
 }
 
 const MyButton: FC<MyButtonProps> = ({

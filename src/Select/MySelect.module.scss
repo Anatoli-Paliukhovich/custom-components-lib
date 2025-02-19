@@ -1,0 +1,81 @@
+@use '../common.module.scss' as *;
+
+.selectInput {
+  position: relative;
+  font-size: toRem(18);
+  color: $main-grey;
+  .select {
+    border: toRem(1) solid $main-grey;
+    border-radius: toRem(4);
+    padding: toRem(15) toRem(50) toRem(15) toRem(8);
+    transition: border-color 0.2s;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    appearance: none;
+
+    &:focus {
+      border: toRem(1.5) solid $color-main;
+    }
+
+    &.error {
+      border: toRem(1) solid $error-color;
+      &:focus {
+        border: toRem(1.5) solid $error-color;
+      }
+    }
+  }
+
+  .label {
+    position: absolute;
+    top: 50%;
+    left: toRem(8);
+    transform: translateY(-50%);
+    transition: 0.2s;
+    pointer-events: none;
+
+    &.error {
+      color: $error-color;
+    }
+  }
+
+  .active {
+    top: 0;
+    left: toRem(8);
+    background-color: $title_color;
+    font-size: toRem(14);
+    padding: toRem(0) toRem(5);
+    color: $color-main-dark;
+  }
+
+  .helperText {
+    position: absolute;
+    bottom: toRem(-20);
+    left: toRem(5);
+    font-size: toRem(12);
+    color: $error-color;
+  }
+
+  .arrow {
+    position: absolute;
+    right: toRem(10);
+    top: 50%;
+    width: 0;
+    height: 0;
+    border-left: toRem(5) solid transparent;
+    border-right: toRem(5) solid transparent;
+    border-top: toRem(5) solid $main-grey;
+    transform: translateY(-50%) rotate(0deg);
+    transition:
+      transform 0.2s,
+      border-top-color 0.2s;
+
+    &.arrowUp {
+      transform: translateY(-50%) rotate(180deg);
+      border-top-color: $color-main;
+    }
+    &.error {
+      border-top-color: $error-color;
+    }
+  }
+}

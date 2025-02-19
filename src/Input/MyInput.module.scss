@@ -41,7 +41,7 @@
     .active {
       top: 0;
       left: toRem(8);
-      background-color: white;
+      background-color: $title_color;
       font-size: toRem(14);
       padding: toRem(0) toRem(5);
       color: $color-main-dark;

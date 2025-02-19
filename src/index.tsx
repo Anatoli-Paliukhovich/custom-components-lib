@@ -1,3 +1,5 @@
 import MyButton from './Button/MyButton';
 import MyInput from './Input/MyInput';
-export { MyButton, MyInput };
+import MySelect from './Select/MySelect';
+import MyCheckbox from './Checkbox/MyCheckbox';
+export { MyButton, MyInput, MySelect, MyCheckbox };

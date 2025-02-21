@@ -21,7 +21,7 @@
     }
 
     &:active {
-      transform: scale(0.95);
+      transform: scale(0.98);
     }
 
     &.disabled {
@@ -42,7 +42,7 @@
     }
 
     &:active {
-      transform: scale(0.95);
+      transform: scale(0.98);
       background-color: $btn-active-color;
     }
 
@@ -63,7 +63,7 @@
     }
 
     &:active {
-      transform: scale(0.95);
+      transform: scale(0.98);
       background-color: $btn-active-color;
     }
 

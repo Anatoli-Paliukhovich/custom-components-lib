@@ -3,7 +3,6 @@
   "version": "1.0.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "build": "webpack && tsc --emitDeclarationOnly",
     "storybook": "storybook dev -p 6006",

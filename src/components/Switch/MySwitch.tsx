@@ -2,14 +2,14 @@ import { FC } from 'react';
 import styles from './MySwitch.module.scss';
 
 export interface MySwitchProps {
-  checked?: boolean;
+  checked: boolean;
   onChange: (checked: boolean) => void;
   disabled?: boolean;
   className?: string;
 }
 
 const MySwitch: FC<MySwitchProps> = ({
-  checked = false,
+  checked,
   onChange,
   disabled = false,
   className = '',

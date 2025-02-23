@@ -14,21 +14,18 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "declarations.d.ts",
-    "jest.d.ts",
-    "jest.config.ts",
-    "setupTests.ts"
-  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "declarations.d.ts", "jest.d.ts"],
   "exclude": [
     "node_modules",
     "dist",
+    "src/unitTests",
+    "src/stories",
     ".storybook/**/*.d.ts",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
-    "webpack.config.ts"
+    "webpack.config.ts",
+    "jest.config.ts",
+    "setupTests.ts"
   ],
   "ts-node": {
     "compilerOptions": {

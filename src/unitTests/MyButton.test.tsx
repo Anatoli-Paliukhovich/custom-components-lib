@@ -1,3 +1,4 @@
+import React from 'react';
 import { render, screen } from '@testing-library/react';
 import MyButton, { MyButtonProps } from '../components/Button/MyButton';
 
@@ -52,5 +53,17 @@ describe('MyButton', () => {
     render(<MyButton {...defaultProps} size="small" />);
     const button = screen.getByRole('button');
     expect(button).toHaveClass('small');
+  });
+
+  it('renders with size "medium"', () => {
+    render(<MyButton {...defaultProps} size="medium" />);
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('medium');
+  });
+
+  it('renders with size "large"', () => {
+    render(<MyButton {...defaultProps} size="large" />);
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('large');
   });
 });

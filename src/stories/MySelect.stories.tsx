@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import MySelect from '@/components/Select/MySelect';
-
+import MySelect from '../components/Select/MySelect';
+import React from 'react';
 const meta: Meta<typeof MySelect> = {
   title: 'Example/MySelect',
   component: MySelect,

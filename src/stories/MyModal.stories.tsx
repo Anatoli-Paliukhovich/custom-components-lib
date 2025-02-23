@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import MyModal from '../Modal/MyModal';
-import MyButton from '../Button/MyButton';
+import MyModal from '@/components/Modal/MyModal';
+import MyButton from '@/components/Button/MyButton';
 
 const meta: Meta<typeof MyModal> = {
   title: 'Example/MyModal',

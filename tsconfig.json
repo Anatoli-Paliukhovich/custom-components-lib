@@ -14,7 +14,14 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "declarations.d.ts"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "declarations.d.ts",
+    "jest.d.ts",
+    "jest.config.ts",
+    "setupTests.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist",

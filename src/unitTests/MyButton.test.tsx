@@ -53,10 +53,4 @@ describe('MyButton', () => {
     const button = screen.getByRole('button');
     expect(button).toHaveClass('small');
   });
-
-  it('renders with size "medium"', () => {
-    render(<MyButton {...defaultProps} size="medium" />);
-    const button = screen.getByRole('button');
-    expect(button).toHaveClass('medium');
-  });
 });

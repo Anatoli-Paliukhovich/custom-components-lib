@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react';
-import MyButton, { MyButtonProps } from '../components/Button/MyButton';
+import { render, screen, fireEvent } from '@testing-library/react';
+import MyButton, { MyButtonProps } from '@/components/Button/MyButton';
 
 describe('MyButton', () => {
   const defaultProps: MyButtonProps = {
@@ -64,5 +64,13 @@ describe('MyButton', () => {
     render(<MyButton {...defaultProps} size="large" />);
     const button = screen.getByRole('button');
     expect(button).toHaveClass('large');
+  });
+
+  test('handles onClick event handler when clicked', () => {
+    const handleClick = jest.fn();
+    render(<MyButton {...defaultProps} onClick={handleClick} />);
+    const button = screen.getByRole('button');
+    fireEvent.click(button);
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 });

@@ -54,7 +54,6 @@
       padding: toRem(10) toRem(3);
       border-bottom: toRem(1) solid $main-grey;
       outline: none;
-      width: 100%;
 
       &:focus {
         border-bottom: toRem(1.5) solid $color-main;
@@ -87,7 +86,6 @@
   }
 
   &.filled {
-    background-color: $main-grey-light;
     border-radius: toRem(4) toRem(4) 0 0;
 
     .input {
@@ -96,7 +94,6 @@
       border-radius: toRem(4) toRem(4) 0 0;
       border-bottom: toRem(1.5) solid $main-grey;
       outline: none;
-      width: 100%;
       padding: toRem(25) toRem(3) toRem(6) toRem(3);
 
       &:focus {

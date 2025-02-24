@@ -5,11 +5,11 @@ export type Variant = 'outlined' | 'standard' | 'filled';
 
 export interface MyInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  error?: boolean;
-  helperText?: string;
-  variant?: Variant;
+  variant: Variant;
   label: string;
+  error: boolean;
   className?: string;
+  helperText?: string;
 }
 
 const MyInput: FC<MyInputProps> = ({

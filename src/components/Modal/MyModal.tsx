@@ -10,6 +10,7 @@ export interface MyModalProps {
 const MyModal: FC<MyModalProps> = ({ open, onClose, children }) => {
   return (
     <div
+      data-testid="modal"
       className={`${styles.modal} ${open ? styles.open : ''}`}
       onClick={onClose}
     >

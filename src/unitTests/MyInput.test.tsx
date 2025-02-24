@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import MyInput, { MyInputProps } from '@/components/Input/MyInput';
+import MyInput, { MyInputProps } from '../components/Input/MyInput';
 
 describe('MyInput', () => {
   const defaultProps: MyInputProps = {

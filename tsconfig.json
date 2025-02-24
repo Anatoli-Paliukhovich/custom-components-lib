@@ -11,22 +11,21 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*", "./dist/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "declarations.d.ts", "jest.d.ts"],
   "exclude": [
     "node_modules",
     "dist",
-   //  "src/unitTests",
-   //  "src/stories", Добавить, если не нужно включать в сборку
+    //  "src/unitTests",
+    //  "src/stories", Добавить, если не нужно включать в сборку
     ".storybook/**/*.d.ts",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
     "webpack.config.ts",
     "jest.config.ts",
     "setupTests.ts",
-    "setupTests.ts"
   ],
   "ts-node": {
     "compilerOptions": {

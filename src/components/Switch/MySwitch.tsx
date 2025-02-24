@@ -25,7 +25,11 @@ const MySwitch: FC<MySwitchProps> = ({
   }
 
   return (
-    <div className={rootClasses.join(' ')} onClick={handleToggle}>
+    <div
+      data-testid="switch"
+      className={rootClasses.join(' ')}
+      onClick={handleToggle}
+    >
       <div className={`${styles.switch} ${checked ? styles.checked : ''}`}>
         <div
           className={`${styles.circle} ${checked ? styles.checkedCircle : ''}`}

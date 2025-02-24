@@ -20,7 +20,7 @@ const SelectInput: FC<SelectInputProps> = ({
   const [selectedValue, setSelectedValue] = useState('');
 
   const handleFocus = () => {
-    setIsFocused(!isFocused);
+    setIsFocused(true);
   };
 
   const handleBlur = () => {
@@ -45,9 +45,12 @@ const SelectInput: FC<SelectInputProps> = ({
     error ? styles.error : '',
   ];
 
+  const selectId = `select-${label.replace(/\s+/g, '-').toLowerCase()}`;
+
   return (
     <div className={rootClasses.join(' ')}>
       <select
+        id={selectId}
         {...props}
         className={selectClasses.join(' ')}
         onFocus={handleFocus}
@@ -58,7 +61,9 @@ const SelectInput: FC<SelectInputProps> = ({
         <option value="" />
         {props.children}
       </select>
-      <label className={labelClasses.join(' ')}>{label}</label>
+      <label htmlFor={selectId} className={labelClasses.join(' ')}>
+        {label}
+      </label>
       <span className={arrowClasses.join(' ')} />
       {error && <span className={styles.helperText}>{helperText}</span>}
     </div>

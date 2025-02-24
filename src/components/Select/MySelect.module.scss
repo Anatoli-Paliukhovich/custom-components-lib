@@ -4,6 +4,8 @@
   position: relative;
   font-size: toRem(18);
   color: $main-grey;
+  display: inline-block;
+
   .select {
     border: toRem(1) solid $main-grey;
     border-radius: toRem(4);

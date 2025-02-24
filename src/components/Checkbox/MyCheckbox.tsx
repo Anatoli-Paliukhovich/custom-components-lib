@@ -15,12 +15,20 @@ const Checkbox: FC<CheckboxProps> = ({
   className,
   ...props
 }) => {
+  const checkboxId = `checkbox-${label.replace(/\s+/g, '-').toLowerCase()}`;
   const checkboxClasses = [styles.checkbox, styles[variant], className];
 
   return (
     <div className={styles.checkboxContainer}>
-      <input type="checkbox" className={checkboxClasses.join(' ')} {...props} />
-      <label className={styles.label}>{label}</label>
+      <input
+        type="checkbox"
+        id={checkboxId}
+        className={checkboxClasses.join(' ')}
+        {...props}
+      />
+      <label htmlFor={checkboxId} className={styles.label}>
+        {label}
+      </label>
     </div>
   );
 };

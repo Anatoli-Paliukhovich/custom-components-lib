@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import MyButton, { MyButtonProps } from '@/components/Button/MyButton';
+import MyButton, { MyButtonProps } from '../components/Button/MyButton';
 
 describe('MyButton', () => {
   const defaultProps: MyButtonProps = {

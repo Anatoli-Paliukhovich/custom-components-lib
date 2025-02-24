@@ -31,7 +31,7 @@ export default tseslint.config(
       '.storybook/**/*',
       'webpack.config.ts',
       // 'src/stories',
-      // 'src/unitTests',
+      // 'src/unitTests', Добавить, если не нужно включать в сборку
       'jest.config.ts',
       'setupTests.ts',
     ],

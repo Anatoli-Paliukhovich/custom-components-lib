@@ -19,7 +19,7 @@
     "node_modules",
     "dist",
    //  "src/unitTests",
-   //  "src/stories",
+   //  "src/stories", Добавить, если не нужно включать в сборку
     ".storybook/**/*.d.ts",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",

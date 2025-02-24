@@ -65,7 +65,7 @@ const MyInput: FC<MyInputProps> = ({
       />
       <label htmlFor={inputId} className={labelClasses.join(' ')}>
         {label}
-      </label>{' '}
+      </label>
       {error && <span className={styles.helperText}>{helperText}</span>}
     </div>
   );

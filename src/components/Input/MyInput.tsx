@@ -37,7 +37,12 @@ const MyInput: FC<MyInputProps> = ({
     setInputValue(event.target.value);
   };
 
-  const rootClasses = [styles.myInput, styles[variant], className];
+  const rootClasses = [
+    styles.myInput,
+    styles[variant],
+    className,
+    error ? styles.error : '',
+  ];
   const labelClasses = [
     styles.label,
     isFocused || inputValue ? styles.active : '',
@@ -45,9 +50,12 @@ const MyInput: FC<MyInputProps> = ({
   ];
   const inputClasses = [styles.input, error ? styles.error : ''];
 
+  const inputId = `my-input-${label.replace(/\s+/g, '-').toLowerCase()}`;
+
   return (
     <div className={rootClasses.join(' ')}>
       <input
+        id={inputId}
         {...props}
         className={inputClasses.join(' ')}
         onFocus={handleFocus}
@@ -55,7 +63,9 @@ const MyInput: FC<MyInputProps> = ({
         onChange={handleChange}
         value={inputValue}
       />
-      <label className={labelClasses.join(' ')}>{label}</label>
+      <label htmlFor={inputId} className={labelClasses.join(' ')}>
+        {label}
+      </label>{' '}
       {error && <span className={styles.helperText}>{helperText}</span>}
     </div>
   );

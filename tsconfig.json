@@ -18,13 +18,14 @@
   "exclude": [
     "node_modules",
     "dist",
-    "src/unitTests",
-    "src/stories",
+   //  "src/unitTests",
+   //  "src/stories",
     ".storybook/**/*.d.ts",
     ".storybook/**/*.ts",
     ".storybook/**/*.tsx",
     "webpack.config.ts",
     "jest.config.ts",
+    "setupTests.ts",
     "setupTests.ts"
   ],
   "ts-node": {

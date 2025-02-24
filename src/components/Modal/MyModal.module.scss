@@ -1,0 +1,53 @@
+@use '@/common.module.scss' as *;
+
+.modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: $btn-box-shadow1;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 100;
+  &.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.modalBody {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: toRem(10) toRem(10);
+}
+
+.modalContent {
+  position: relative;
+  max-width: toRem(800);
+  background-color: $title_color;
+  border-radius: toRem(8);
+  padding: toRem(20);
+  box-shadow: 0 toRem(4) toRem(8) $btn-box-shadow1;
+  transform: scale(0.5);
+  transition: transform 0.3s ease;
+  &.open {
+    transform: scale(1);
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: toRem(10);
+  right: toRem(10);
+  background: none;
+  border: none;
+  font-size: toRem(25);
+  cursor: pointer;
+}

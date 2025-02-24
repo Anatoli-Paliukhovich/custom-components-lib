@@ -1,0 +1,44 @@
+@use '@/common.module.scss' as *;
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  width: toRem(20);
+  height: toRem(20);
+  cursor: pointer;
+  border: toRem(1) solid $main-grey;
+  border-radius: toRem(4);
+  position: relative;
+  outline: none;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+
+  &.basic {
+    background-color: $color-main;
+    border-color: $color-main;
+
+    &:checked {
+      background-color: $color-main;
+    }
+  }
+
+  &.disabled {
+    background-color: $main-grey;
+    border-color: $main-grey;
+    cursor: not-allowed;
+
+    &:checked {
+      background-color: $main-grey;
+    }
+  }
+}
+
+.label {
+  margin-left: toRem(10);
+  font-size: toRem(16);
+  color: $main-grey;
+}

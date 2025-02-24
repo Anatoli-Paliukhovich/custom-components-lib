@@ -1,0 +1,50 @@
+@use '@/common.module.scss' as *;
+.switchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.switch {
+  width: toRem(45);
+  height: toRem(20);
+  background-color: $main-grey;
+  border-radius: toRem(10);
+  position: relative;
+  transition: background-color 0.3s;
+  &.checked {
+    background-color: $color-main-dark;
+    opacity: 0.8;
+  }
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: toRem(-2);
+  width: toRem(24);
+  height: toRem(24);
+  border-radius: 50%;
+  background-color: $title_color;
+  transform: translateY(-50%);
+  box-shadow: 0 toRem(3) toRem(8) $btn-box-shadow1;
+  transition: all ease 0.3s;
+  &:hover {
+    box-shadow: toRem(0) toRem(0) toRem(12) $btn-box-shadow1;
+    transition: box-shadow ease 0.3s;
+  }
+  &.checkedCircle {
+    background-color: $color-main;
+  }
+  .switch.checked & {
+    transform: translate(toRem(25), -50%);
+    transition: transform ease 0.3s;
+  }
+}
